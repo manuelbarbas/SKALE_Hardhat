@@ -12,9 +12,7 @@ async function main() {
   const myAddress = "0x..."
   const token = await hre.ethers.deployContract("MyToken", [myAddress], {gasLimit});
 
-  await token.waitForDeployment();
-
-  //console.log(token.getAddress());
+  console.log(token.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
